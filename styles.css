@@ -1,20 +1,27 @@
+/* all */
+
 * {
     font-family: 'Poppins', sans-serif;
 }
 
 body {
     position: relative;
-    background-color: darkblue;
+    background-color: black;
     margin: 0;
     height: 100vh;
     width: 100vw;
 }
 
-
 a {
     text-decoration: none;
     color: white;
 }
+
+a:hover {
+    color: rgb(178, 73, 3);
+}
+
+/* left side */
 
 .left-picture {
     position: relative;
@@ -33,8 +40,16 @@ a {
 
 .header {
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    background-image: linear-gradient(rgba(50, 0, 0, 0), rgba(50, 0, 0, 0.2), rgba(50, 0, 0, 0));
+    background-image: linear-gradient(rgba(50, 0, 0, 0), rgba(50, 0, 0, 0.3), rgba(50, 0, 0, 0));
+}
+
+.leaf {
+    font-size: 5rem;
 }
 
 .sign-up-text {
@@ -43,22 +58,118 @@ a {
     font-weight: bold;
     font-size: 2rem;
     color: white;
+}
+
+.credits {
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 8px;
     margin: auto;
+}
+
+/* right side */
+
+input {
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+legend {
+    font-size: 1.2rem;
+}
+
+button {
+    margin: 15px 0px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(50, 0, 0, 1);
+    color: white;
+    padding: 15px 60px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: rgb(250, 250, 250);
+    color: rgba(50, 0, 0, 1);
+}
+
+label {
+    font-size: 0.8rem;
+    color: rgb(156, 156, 156);
+}
+
+input {
+    background-color: rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-width: 1px;
+}
+
+input:active, input:focus {
+    border: 1px solid rgba(50, 0, 0, 1);
+    outline: none;
+}
+
+#page-form {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#form {
+    width: 40%;
+    padding: 2% 8% 2% 0;
+}
+
+.left {
+    padding-left: 3vw;
 }
 
 .right-panel {
     float: left;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
     width: 60%;
     height: 100vh;
+    color: rgb(206, 206, 206);
 }
 
-.credits {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
+.top-block {
+    height: 30vh;
+    font-weight: 500;
+    font-size: 1.2rem;
+    width: 90%;
+    line-height: 2rem;
+    margin-top: 3%;
 }
 
-@media (max-width: 400px) {
+.intros {
+    padding: 0;
+    margin: 0 10px 0 0;
+}
+
+.intro-extra {
+    margin: 6% 0 8% 0;
+}
+
+@media (max-width: 550px) {
+
+#page-form {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+#form { 
+    padding: 2% 0;
+    width: 80%;
+}
 
 .picture-sizing {
     width: 100vw;
@@ -71,9 +182,13 @@ a {
     height: 10vh;
 }
 
+.leaf {
+    font-size: 3rem;
+    margin: 0;
+}
+
 .header {
     position: absolute;
-    top: 50%;
 }
 
 .right-panel{
@@ -87,5 +202,6 @@ a {
 
 .credits {
     font-size: 0.4rem;
+    left: 16px;
 }
 }
